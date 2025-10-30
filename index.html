@@ -14,7 +14,6 @@
       sizes="32x32"
       href="./assets/favicon.svg"
     />
-    <script defer src="./scripts.js"></script>
     <title>Kanban Task Management</title>
   </head>
 
@@ -56,10 +55,6 @@
             </div>
             <!-- Tasks container for TODO -->
             <div class="tasks-container">
-              <div class="task-div">Launch Epic Career 🚀</div>
-              <div class="task-div">Conquer React⚛️</div>
-              <div class="task-div">Understand Databases⚙️</div>
-              <div class="task-div">Crush Frameworks🖼️</div>
             </div>
           </div>
           <!-- DOING Column -->
@@ -70,8 +65,6 @@
             </div>
             <!-- Tasks container for DOING -->
             <div class="tasks-container">
-              <div class="task-div">Master JavaScript 💛</div>
-              <div class="task-div">Never Give Up 🏆</div>
             </div>
           </div>
           <!-- DONE Column -->
@@ -82,12 +75,31 @@
             </div>
             <!-- Tasks container for DONE -->
             <div class="tasks-container">
-              <div class="task-div">Explore ES6 Features 🚀</div>
-              <div class="task-div">Have fun 🥳</div>
             </div>
           </div>
         </main>
       </div>
+
+      <dialog class="modal-hidden">
+         <div class="overlay-hidden">
+          <h3 class="modal-headline">Task</h3>
+          <label  for="task-name-input">Title</label>
+          <input type="text" />
+          <label for ="description-textarea">Description</label>
+          <textarea id="description-textarea" rows="4"></textarea>
+          <label for="status-select">Status</label>
+          <select id="status-select">
+            <option value="todo">TODO</option>
+            <option value="doing">DOING</option>
+            <option value="done">DONE</option>
+          </select>
+         </div>
+      </dialog>
+      
+
+       
     </div>
+    <script defer src="./scripts.js"></script>
+    <script defer src="./initialData.js"></script>
   </body>
 </html>
