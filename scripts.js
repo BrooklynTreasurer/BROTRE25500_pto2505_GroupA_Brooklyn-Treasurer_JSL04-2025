@@ -28,3 +28,11 @@ function renderTasks(tasks) {
     }
   });
 }
+
+function openTaskModal(task) {
+      const modal = document.getElementById('task-modal');
+      document.getElementById('task-title').value = movie.title;
+      document.getElementById('task-desc').value = movie.description;
+      document.getElementById('task-status').value = movie.status;
+      modal.showModal();
+    }

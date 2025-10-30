@@ -80,20 +80,19 @@
         </main>
       </div>
 
-      <dialog class="modal-hidden">
-         <div class="overlay-hidden">
-          <h3 class="modal-headline">Task</h3>
-          <label  for="task-name-input">Title</label>
-          <input type="text" />
-          <label for ="description-textarea">Description</label>
-          <textarea id="description-textarea" rows="4"></textarea>
-          <label for="status-select">Status</label>
-          <select id="status-select">
-            <option value="todo">TODO</option>
-            <option value="doing">DOING</option>
-            <option value="done">DONE</option>
-          </select>
-         </div>
+      <dialog id="task-modal">
+        <h3>Task</h3>
+                <button id="close-modal-btn">Close</button>
+        <label for="task-title">Title</label>
+        <input id="task-title" />
+        <label for="task-desc">Description</label>
+        <textarea id="task-desc" rows="4"></textarea>
+        <label for="task-status">Status</label>
+        <select id="task-status">
+          <option value="towatch">To Watch</option>
+          <option value="watching">Watching</option>
+          <option value="watched">Watched</option>
+        </select>
       </dialog>
       
 
