@@ -13,3 +13,10 @@ function getTasksContainerByStatus(status) {
    const column = document.querySelector(`.column-div[data-status="${status}"]`);
    return column.querySelector('.tasks-container');
 }
+
+function clearExistingTasks() {
+  document.querySelectorAll('.tasks-container').forEach(container => {
+    container.innerHTML = '';
+  });
+}
+
