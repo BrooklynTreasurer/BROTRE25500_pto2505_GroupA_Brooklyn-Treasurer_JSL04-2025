@@ -20,3 +20,11 @@ function clearExistingTasks() {
   });
 }
 
+function renderTasks(tasks) {
+  initialTasks.forEach(task => {
+    const tasksContainer = getTasksContainerByStatus(task.status);
+    if (tasksContainer) {
+      tasksContainer.appendChild(createTaskElement(task));
+    }
+  });
+}
