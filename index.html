@@ -6,19 +6,13 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;1,400&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="./styles.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon.svg"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.svg" />
     <title>Kanban Task Management</title>
   </head>
 
   <body>
-    <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
+    <!-- Sidebar -->
     <nav class="side-bar" id="side-bar-div">
       <div id="side-logo-div">
         <img id="logo" src="./assets/logo-light.svg" alt="logo-light" />
@@ -30,75 +24,68 @@
       </div>
     </nav>
 
-    <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
+    <!-- Main layout -->
     <div id="layout">
       <header id="header" class="sticky-header">
         <div class="header-name-div">
-          <img
-            src="./assets/favicon.svg"
-            alt="logo-mobile"
-            class="logo-mobile"
-          />
-          <h2 class="header-board-name" id="header-board-name">
-            Launch Career
-          </h2>
+          <img src="./assets/favicon.svg" alt="logo-mobile" class="logo-mobile" />
+          <h2 class="header-board-name" id="header-board-name">Launch Career</h2>
         </div>
       </header>
 
       <div class="container">
         <main class="card-column-main">
-          <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
+          <!-- TODO column -->
           <div class="column-div" data-status="todo">
             <div id="todo-head-div" class="column-head-div">
               <span class="dot" id="todo-dot"></span>
               <h4 id="toDoText" class="columnHeader">TODO (4)</h4>
             </div>
-            <!-- Tasks container for TODO -->
-            <div class="tasks-container">
-            </div>
+            <div class="tasks-container"></div>
           </div>
-          <!-- DOING Column -->
+
+          <!-- DOING column -->
           <div class="column-div" data-status="doing">
             <div id="doing-head-div" class="column-head-div">
               <span class="dot" id="doing-dot"></span>
               <h4 id="doingText" class="columnHeader">DOING (2)</h4>
             </div>
-            <!-- Tasks container for DOING -->
-            <div class="tasks-container">
-            </div>
+            <div class="tasks-container"></div>
           </div>
-          <!-- DONE Column -->
+
+          <!-- DONE column -->
           <div class="column-div" data-status="done">
             <div id="done-head-div" class="column-head-div">
               <span class="dot" id="done-dot"></span>
               <h4 id="doneText" class="columnHeader">DONE (2)</h4>
             </div>
-            <!-- Tasks container for DONE -->
-            <div class="tasks-container">
-            </div>
+            <div class="tasks-container"></div>
           </div>
         </main>
       </div>
 
+      <!-- Modal -->
       <dialog id="task-modal">
         <h3>Task</h3>
-                <button id="close-modal-btn">Close</button>
+        <button id="close-modal-btn">Close</button>
+
         <label for="task-title">Title</label>
         <input id="task-title" />
+
         <label for="task-desc">Description</label>
         <textarea id="task-desc" rows="4"></textarea>
+
         <label for="task-status">Status</label>
         <select id="task-status">
-          <option value="towatch">To Watch</option>
-          <option value="watching">Watching</option>
-          <option value="watched">Watched</option>
+          <!-- ✅ Changed options to match your JS: todo, doing, done -->
+          <option value="todo">To Do</option>
+          <option value="doing">Doing</option>
+          <option value="done">Done</option>
         </select>
       </dialog>
-      
-
-       
     </div>
-    <script defer src="initialData.js"></script>
-        <script type="module" src="./scripts.js"></script>
+
+    <script defer src="./initialData.js"></script>
+    <script type="module" src="./scripts.js"></script>
   </body>
 </html>
