@@ -36,3 +36,9 @@ function openTaskModal(task) {
       document.getElementById('task-status').value = movie.status;
       modal.showModal();
     }
+
+function closeTaskModal() {
+      const modal = document.getElementById('task-modal');
+      modal.close();
+    }
+
