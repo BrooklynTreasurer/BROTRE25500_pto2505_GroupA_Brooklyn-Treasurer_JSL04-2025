@@ -42,3 +42,11 @@ function closeTaskModal() {
       modal.close();
     }
 
+
+function initialTasksList() {
+  clearExistingTasks();
+  renderTasks(initialTasks);
+  closeTaskModal();
+}
+
+document.addEventListener('DOMContentLoaded', initialTasksList);
