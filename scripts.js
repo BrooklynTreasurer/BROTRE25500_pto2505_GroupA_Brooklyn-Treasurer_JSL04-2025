@@ -39,7 +39,10 @@ function openTaskModal(task) {
 
 function closeTaskModal() {
   const modal = document.getElementById('task-modal');
-  modal.close();
+  document.getElementById('close-modal-btn').addEventListener('click', () => {
+    modal.close();
+  }
+);
 }
 
 function initialTasksList() {
