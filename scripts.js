@@ -1,17 +1,17 @@
-
+import { initialTasks } from './initialData.js';
 
 function createTaskElement(task) {
   const taskDivElement = document.createElement('div');
-  taskDiv.className = 'task-div';
-  taskDiv.textContent = task.title;
-  taskDiv.dataset.id = task.id;
-  taskDivElement.addEventListener('click', () => openModal(task));
+  taskDivElement.className = 'task-div';
+  taskDivElement.textContent = task.title;
+  taskDivElement.dataset.id = task.id;
+  taskDivElement.addEventListener('click', () => openTaskModal(task));
   return taskDivElement;
 }
 
 function getTasksContainerByStatus(status) {
-   const column = document.querySelector(`.column-div[data-status="${status}"]`);
-   return column.querySelector('.tasks-container');
+  const column = document.querySelector(`.column-div[data-status="${status}"]`);
+  return column ? column.querySelector('.tasks-container') : null;
 }
 
 function clearExistingTasks() {
@@ -21,7 +21,7 @@ function clearExistingTasks() {
 }
 
 function renderTasks(tasks) {
-  initialTasks.forEach(task => {
+  tasks.forEach(task => {
     const tasksContainer = getTasksContainerByStatus(task.status);
     if (tasksContainer) {
       tasksContainer.appendChild(createTaskElement(task));
@@ -30,18 +30,17 @@ function renderTasks(tasks) {
 }
 
 function openTaskModal(task) {
-      const modal = document.getElementById('task-modal');
-      document.getElementById('task-title').value = movie.title;
-      document.getElementById('task-desc').value = movie.description;
-      document.getElementById('task-status').value = movie.status;
-      modal.showModal();
-    }
+  const modal = document.getElementById('task-modal');
+  document.getElementById('task-title').value = task.title;
+  document.getElementById('task-desc').value = task.description;
+  document.getElementById('task-status').value = task.status;
+  modal.showModal();
+}
 
 function closeTaskModal() {
-      const modal = document.getElementById('task-modal');
-      modal.close();
-    }
-
+  const modal = document.getElementById('task-modal');
+  modal.close();
+}
 
 function initialTasksList() {
   clearExistingTasks();
