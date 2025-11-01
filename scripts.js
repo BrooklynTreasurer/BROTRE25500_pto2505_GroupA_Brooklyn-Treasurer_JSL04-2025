@@ -68,23 +68,27 @@ function openTaskModal(task) {
 /**
  * Set up the modal close button
  */
-function closeTaskModal() {
+function setupModalClose() {
   const modal = document.getElementById('task-modal');
-  document.getElementById('close-modal-btn').addEventListener('click', () => {
+  const closeBtn = document.getElementById('close-modal-btn');
+
+  closeBtn.addEventListener('click', () => {
     modal.close();
   });
 }
 
 /**
- * Load the starting tasks and setup modal
+ * Load the starting tasks
  */
 function initialTasksList() {
   clearExistingTasks();
   renderTasks(initialTasks);
-  closeTaskModal();
 }
 
 /**
  * Run everything after the page loads
  */
-document.addEventListener('DOMContentLoaded', initialTasksList);
+document.addEventListener('DOMContentLoaded', () => {
+  initialTasksList();
+  setupModalClose();
+});
