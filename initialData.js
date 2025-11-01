@@ -1,3 +1,7 @@
+/**
+ * exporting starting task data
+ */
+
 export const initialTasks = [
   {
     id: 1,
