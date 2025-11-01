@@ -387,7 +387,9 @@ input, select, textarea {
   background: none;
   border: none;
   cursor: pointer;
+  outline: none;
 }
+
 
 /******** Mobile ********/
 @media screen and (max-width: 576px) {
