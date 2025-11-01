@@ -1,4 +1,4 @@
-# ✅ Task Input & Status Validation System (JSL03)
+# ✅ JSL04: Dynamic Task Display & Modal View
 
 ## 👨‍💻 Author  
 **Developed by Brooklyn Treasurer**
@@ -6,47 +6,66 @@
 ---
 
 ## 📝 Project Description  
-The **Task Input & Status Validation System (JSL03)** is a JavaScript-powered project that allows users to add, manage, and validate tasks directly through the **browser console**.  
-It builds upon the corrected **Kanban Board (JSL01)** foundation, expanding its logic with **dynamic task creation, validation, and user feedback**.  
+The **JSL04: Dynamic Task Display & Modal View** project is a JavaScript-powered application that allows users to **view, manage, and edit tasks directly in the browser DOM**.  
 
-Users can input multiple tasks, each containing a title, description, and status.  
-Once the maximum task limit is reached, the program provides an alert and displays all tasks neatly in the console.  
-This project demonstrates a strong understanding of **JavaScript arrays, objects, prompts, loops, and data validation**.
+Building on previous Kanban board iterations, this version introduces **dynamic task rendering, interactive modals, and real-time updates**. Tasks are automatically placed in their correct columns: `"To Do"`, `"In Progress"`, and `"Done"`.  
+
+Clicking on a task opens a **modal view**, allowing users to edit the **title**, **description**, and **status**, with changes immediately reflected on the board.  
+
+This project highlights expertise in **DOM manipulation, modular JavaScript, event handling, and responsive UI design**.
 
 ---
 
 ## 🎯 Key Objectives  
 
-- ✅ Store all tasks as **objects** inside an **array** (`initialTasks`)  
-- ✅ Add up to **3 new tasks** through user prompts  
-- ✅ Assign each new task a **unique incremental ID**  
-- ✅ Prompt the user for **title**, **description**, and **status**  
-- ✅ Validate task status (`todo`, `doing`, or `done`) and re-prompt until valid  
-- ✅ Alert the user once the **maximum task limit (6)** is reached  
-- ✅ Log **all tasks** clearly in the console with the label `"All Tasks:"`  
-- ✅ Log **completed tasks** (status = `done`) with the label `"Completed Tasks:"`  
-- ✅ Use **clear variable names** and **descriptive comments** throughout the code  
+- ✅ Dynamically generate **task elements** from initial task data  
+- ✅ Insert tasks into **correct columns** based on their status  
+- ✅ Enable **modal view** when a task is clicked  
+- ✅ Allow **editing** of task title, description, and status in the modal  
+- ✅ Update the board **in real-time** when changes are made  
+- ✅ Implement **responsive modal design** matching Figma layout, with backdrop focus  
+- ✅ Maintain **modular, clean, and well-documented code** using descriptive variable/function names and JSDoc comments  
 
 ---
 
 ## 🚀 Features  
 
-- 🧠 **Interactive Task Creation** – Add new tasks dynamically through prompts  
-- 🔄 **Real-Time Input Validation** – Ensures task status is valid before submission  
-- 🆔 **Unique Task Identification** – Each task receives a new auto-incremented ID  
-- ⚠️ **Smart Alerts** – Notifies the user once the task limit is reached  
-- 🗂️ **Organized Console Output** – Tasks and completed items are displayed with clear labels  
-- ✍️ **Readable, Commented Code** – Easy to understand and modify  
+- 🗂️ **Dynamic Task Rendering** – Tasks automatically populate the correct columns  
+- ✍️ **Interactive Modal Editing** – Click a task to view and edit details  
+- 🔄 **Status Management** – Change task status using a dropdown and move tasks across columns instantly  
+- 🎨 **Design & Responsiveness** – Modal includes backdrop effect and adapts to desktop/mobile screens  
+- 🧩 **Clean, Modular Code** – Single-responsibility functions with descriptive names and JSDoc comments  
 
 ---
 
 ## 🛠️ Technologies Used  
 
-- **HTML5** – Used for linking and running the JavaScript file  
-- **JavaScript (ES6)** – Main logic for task management, validation, and output  
-- **Browser Console** – Used for user feedback and task display  
+- **HTML5 & CSS3** – Board layout, modal styling, and responsive design  
+- **JavaScript (ES6)** – DOM manipulation, event handling, dynamic task logic  
+- **Browser Console** – Optional logging for debugging and validation  
 
 ---
+
+## 🖥️ Expected Outcome  
+
+A **fully functional dynamic task board** where:  
+
+- Tasks appear under the correct columns based on their status  
+- Users can open a **modal to view/edit task details**  
+- Board updates **instantly** when changes are made  
+- Code is **well-structured, maintainable, and responsive** across all devices  
+
+---
+
+## 📌 How to Use  
+
+1. Open the project in a browser.  
+2. Tasks are displayed under the **To Do**, **In Progress**, or **Done** columns based on their status.  
+3. Click a task to open the **modal**.  
+4. Edit the **title**, **description**, or **status** as needed.  
+5. Close the modal to see changes reflected instantly on the board.  
+6. Repeat as needed to manage all tasks dynamically.  
+
 
 ## ⚙️ Installation & Setup  
 
@@ -54,13 +73,13 @@ Follow these steps to run the project locally:
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/BrooklynTreasurer/BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_JSL03-2025.git
+   git clone https://github.com/BrooklynTreasurer/BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_JSL04-2025.git
 
 2. **Navigate into the project folder**
     ```bash 
-    cd BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_JSL02-2025
+    cd BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_JSL04-2025
 
 3. **Open project on Visual Studio**
    ```
-   BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_JSL02-2025> code .
+   BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_JSL04-2025> code .
 
